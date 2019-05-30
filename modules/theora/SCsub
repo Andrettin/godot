@@ -10,10 +10,10 @@ if env['builtin_libtheora']:
     thirdparty_dir = "#thirdparty/libtheora/"
     thirdparty_sources = [
         #"analyze.c",
-        #"apiwrapper.c",
+        "apiwrapper.c",
         "bitpack.c",
         "cpu.c",
-        #"decapiwrapper.c",
+        "decapiwrapper.c",
         "decinfo.c",
         "decode.c",
         "dequant.c",

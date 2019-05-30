@@ -386,6 +386,7 @@ private:
 class ScriptInstance;
 typedef uint64_t ObjectID;
 
+#undef CONNECT_DEFERRED
 class Object {
 public:
 	enum ConnectFlags {

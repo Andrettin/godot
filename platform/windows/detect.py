@@ -195,7 +195,12 @@ def configure_msvc(env, manual_msvc_config):
 
     ## Compile/link flags
 
-    env.AppendUnique(CCFLAGS=['/MT', '/Gd', '/GR', '/nologo'])
+    if (env["target"] == "debug"):
+        env.AppendUnique(CCFLAGS=['/MDd'])
+    else:
+        env.AppendUnique(CCFLAGS=['/MD'])
+
+    env.AppendUnique(CCFLAGS=['/Gd', '/GR', '/nologo'])
     env.AppendUnique(CXXFLAGS=['/TP']) # assume all sources are C++
     if manual_msvc_config: # should be automatic if SCons found it
         if os.getenv("WindowsSdkDir") is not None:
