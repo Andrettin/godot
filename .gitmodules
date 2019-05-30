@@ -1,0 +1,3 @@
+[submodule "modules/oamlGodotModule"]
+	path = modules/oamlGodotModule
+	url = https://github.com/oamldev/oamlGodotModule
