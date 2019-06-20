@@ -135,13 +135,9 @@ struct Vector2 {
 
 	operator String() const { return String::num(x) + ", " + String::num(y); }
 
-	_FORCE_INLINE_ Vector2(real_t p_x, real_t p_y) {
-		x = p_x;
-		y = p_y;
+	constexpr _FORCE_INLINE_ Vector2(real_t p_x, real_t p_y) : x(p_x), y(p_y) {
 	}
-	_FORCE_INLINE_ Vector2() {
-		x = 0;
-		y = 0;
+	constexpr _FORCE_INLINE_ Vector2() : x(0), y(0) {
 	}
 };
 
@@ -303,17 +299,11 @@ struct Vector2i {
 	operator String() const { return String::num(x) + ", " + String::num(y); }
 
 	operator Vector2() const { return Vector2(x, y); }
-	inline Vector2i(const Vector2 &p_vec2) {
-		x = (int)p_vec2.x;
-		y = (int)p_vec2.y;
+	constexpr inline Vector2i(const Vector2 &p_vec2) : x(static_cast<int>(p_vec2.x)), y(static_cast<int>(p_vec2.y)) {
 	}
-	inline Vector2i(int p_x, int p_y) {
-		x = p_x;
-		y = p_y;
+	constexpr inline Vector2i(int p_x, int p_y) : x(p_x), y(p_y) {
 	}
-	inline Vector2i() {
-		x = 0;
-		y = 0;
+	constexpr Vector2i() : x(0), y(0) {
 	}
 };
 
