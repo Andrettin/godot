@@ -297,6 +297,8 @@ public:
 
 	Variant(const IP_Address &p_address);
 
+	Variant(const void *p_void) = delete;
+	
 	// If this changes the table in variant_op must be updated
 	enum Operator {
 
