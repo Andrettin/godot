@@ -303,7 +303,7 @@ struct Vector2i {
 	}
 	constexpr inline Vector2i(int p_x, int p_y) : x(p_x), y(p_y) {
 	}
-	constexpr Vector2i() : x(0), y(0) {
+	constexpr inline Vector2i() : x(0), y(0) {
 	}
 };
 
