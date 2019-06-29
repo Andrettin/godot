@@ -189,6 +189,10 @@ Vector2i Vector2i::operator+(const Vector2i &p_v) const {
 
 	return Vector2i(x + p_v.x, y + p_v.y);
 }
+Vector2i Vector2i::operator+(const int &rvalue) const {
+
+	return Vector2i(x + rvalue, y + rvalue);
+}
 void Vector2i::operator+=(const Vector2i &p_v) {
 
 	x += p_v.x;
@@ -197,6 +201,10 @@ void Vector2i::operator+=(const Vector2i &p_v) {
 Vector2i Vector2i::operator-(const Vector2i &p_v) const {
 
 	return Vector2i(x - p_v.x, y - p_v.y);
+}
+Vector2i Vector2i::operator-(const int &rvalue) const {
+
+	return Vector2i(x - rvalue, y - rvalue);
 }
 void Vector2i::operator-=(const Vector2i &p_v) {
 
